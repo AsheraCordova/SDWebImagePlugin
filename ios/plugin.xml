@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.sdwebimage.ios"
+        version="1.0">
+
+  <name>CordovaSDWebImagePlugin Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaSDWebImagePlugin">
+        	<param name="ios-package" value="CordovaSDWebImagePlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+	<framework src="SDWebImage" type="podspec" spec="~> 5.13.3" />
+   	 <!-- start ios -->
+     <header-file src="ios/src/CordovaSDWebImagePlugin.h" target-dir="SDWebImagePlugin/ios/src"/>
+     <source-file src="ios/src/CordovaSDWebImagePlugin.m" target-dir="SDWebImagePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/SDWebImagePlugin.h" target-dir="SDWebImagePlugin/ios/src"/>
+     <source-file src="ios/src/SDWebImagePlugin.m" target-dir="SDWebImagePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+
+     <!-- tsc end -->
+  </platform>
+  
+
+
+</plugin>
