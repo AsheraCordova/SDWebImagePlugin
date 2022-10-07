@@ -16,7 +16,7 @@
          	<param name="onload" value="true" />
       </feature>
     </config-file>
-	<framework src="ios/SDWebImage" type="podspec" spec="~> 5.13.3" />
+	<framework src="SDWebImage" type="podspec" spec="~> 5.13.3" />
    	 <!-- start ios -->
      <header-file src="ios/ios/src/CordovaSDWebImagePlugin.h" target-dir="SDWebImagePlugin/ios/src"/>
      <source-file src="ios/ios/src/CordovaSDWebImagePlugin.m" target-dir="SDWebImagePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
