@@ -6,7 +6,7 @@
   <name>CordovaSDWebImagePlugin Plugin</name>
 
   <engines>
-    <engine name="cordova" version=">=3.4.0"/>
+    <engine name="cordova" version=">=11.0.0"/>
   </engines>
   
   <platform name="ios">
