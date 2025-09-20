@@ -3,6 +3,7 @@
 //  source: D:\Java\git\core-ios-widgets\IOSSDWebImagePlugin\src\main\java\com\ashera\sdwebimage\SDWebImagePlugin.java
 //
 
+#import <Foundation/Foundation.h>
 #include "J2ObjC_header.h"
 
 #pragma push_macro("INCLUDE_ALL_SDWebImagePlugin")
@@ -40,6 +41,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ASSDWebImagePlugin)
 
 @compatibility_alias ComAsheraSdwebimageSDWebImagePlugin ASSDWebImagePlugin;
 
+
 #endif
 
 #if !defined (ASSDWebImagePlugin_MyBitmap_) && (INCLUDE_ALL_SDWebImagePlugin || defined(INCLUDE_ASSDWebImagePlugin_MyBitmap))
@@ -49,19 +51,21 @@ J2OBJC_TYPE_LITERAL_HEADER(ASSDWebImagePlugin)
 #define INCLUDE_ADBitmap 1
 #include "Bitmap.h"
 
+@class JavaLangInteger;
+
 @interface ASSDWebImagePlugin_MyBitmap : NSObject < ADBitmap >
 
 #pragma mark Public
 
-- (jint)getHeight;
+- (int32_t)getHeight;
 
 - (id)getImage;
 
-+ (jint)getImageHeightWithId:(id)value;
++ (int32_t)getImageHeightWithId:(id)value;
 
-+ (jint)getImageWidthWithId:(id)value;
++ (int32_t)getImageWidthWithId:(id)value;
 
-- (jint)getRowBytes;
+- (int32_t)getRowBytes;
 
 - (void)setImageWithId:(id)image;
 
@@ -79,11 +83,12 @@ FOUNDATION_EXPORT ASSDWebImagePlugin_MyBitmap *new_ASSDWebImagePlugin_MyBitmap_i
 
 FOUNDATION_EXPORT ASSDWebImagePlugin_MyBitmap *create_ASSDWebImagePlugin_MyBitmap_init(void);
 
-FOUNDATION_EXPORT jint ASSDWebImagePlugin_MyBitmap_getImageWidthWithId_(id value);
+FOUNDATION_EXPORT int32_t ASSDWebImagePlugin_MyBitmap_getImageWidthWithId_(id value);
 
-FOUNDATION_EXPORT jint ASSDWebImagePlugin_MyBitmap_getImageHeightWithId_(id value);
+FOUNDATION_EXPORT int32_t ASSDWebImagePlugin_MyBitmap_getImageHeightWithId_(id value);
 
 J2OBJC_TYPE_LITERAL_HEADER(ASSDWebImagePlugin_MyBitmap)
+
 
 #endif
 

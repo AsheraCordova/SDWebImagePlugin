@@ -3,13 +3,26 @@
 //  source: D:\Java\git\core-ios-widgets\IOSSDWebImagePlugin\src\main\java\com\ashera\sdwebimage\SDWebImagePlugin.java
 //
 
+#define J2OBJC_IMPORTED_BY_JAVA_IMPLEMENTATION 1
+
+
+
+
 #include "IImageDownloader.h"
 #include "ITarget.h"
 #include "ImageDownloaderFactory.h"
 #include "J2ObjC_source.h"
 #include "SDWebImagePlugin.h"
+#include "java/lang/Integer.h"
 
 #import "SDWebImageManager.h"
+
+
+@class NSString;
+
+
+#pragma clang diagnostic error "-Wreturn-type"
+#pragma clang diagnostic ignored "-Wswitch"
 
 
 @interface ASSDWebImagePlugin ()
@@ -53,6 +66,7 @@ __attribute__((unused)) static ASSDWebImagePlugin_TargetImageDownloader *new_ASS
 __attribute__((unused)) static ASSDWebImagePlugin_TargetImageDownloader *create_ASSDWebImagePlugin_TargetImageDownloader_init(void);
 
 J2OBJC_TYPE_LITERAL_HEADER(ASSDWebImagePlugin_TargetImageDownloader)
+
 
 @implementation ASSDWebImagePlugin
 
@@ -131,6 +145,8 @@ void ASSDWebImagePlugin_initPlugin() {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASSDWebImagePlugin)
 
+J2OBJC_NAME_MAPPING(ASSDWebImagePlugin, "com.ashera.sdwebimage", "AS")
+
 @implementation ASSDWebImagePlugin_MyBitmap
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
@@ -144,19 +160,19 @@ J2OBJC_IGNORE_DESIGNATED_END
   self->image_ = image;
 }
 
-- (jint)getRowBytes {
+- (int32_t)getRowBytes {
   return ASSDWebImagePlugin_MyBitmap_getImageWidthWithId_(image_) * 4;
 }
 
-+ (jint)getImageWidthWithId:(id)value {
++ (int32_t)getImageWidthWithId:(id)value {
   return ASSDWebImagePlugin_MyBitmap_getImageWidthWithId_(value);
 }
 
-+ (jint)getImageHeightWithId:(id)value {
++ (int32_t)getImageHeightWithId:(id)value {
   return ASSDWebImagePlugin_MyBitmap_getImageHeightWithId_(value);
 }
 
-- (jint)getHeight {
+- (int32_t)getHeight {
   return ASSDWebImagePlugin_MyBitmap_getImageHeightWithId_(image_);
 }
 
@@ -207,13 +223,13 @@ ASSDWebImagePlugin_MyBitmap *create_ASSDWebImagePlugin_MyBitmap_init() {
   J2OBJC_CREATE_IMPL(ASSDWebImagePlugin_MyBitmap, init)
 }
 
-jint ASSDWebImagePlugin_MyBitmap_getImageWidthWithId_(id value) {
+int32_t ASSDWebImagePlugin_MyBitmap_getImageWidthWithId_(id value) {
   ASSDWebImagePlugin_MyBitmap_initialize();
   UIImage* image = ((UIImage*) value);
   return image.size.width;
 }
 
-jint ASSDWebImagePlugin_MyBitmap_getImageHeightWithId_(id value) {
+int32_t ASSDWebImagePlugin_MyBitmap_getImageHeightWithId_(id value) {
   ASSDWebImagePlugin_MyBitmap_initialize();
   UIImage* image = ((UIImage*) value);
   return image.size.height;
